@@ -1,0 +1,284 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f4f8;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: #f8fafc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3b82f6;
+  background: white;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+button {
+  padding: 14px;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  transform: translateY(-1px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Fort cards */
+.fort {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.fort:hover {
+  transform: scale(1.01);
+}
+
+.fort h3 {
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.fort button {
+  background: #10b981;
+  margin-top: 12px;
+  margin-right: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.fort button:hover {
+  background: #059669;
+}
+
+.fort .delete-btn {
+  background: #ef4444;
+}
+
+.fort .delete-btn:hover {
+  background: #dc2626;
+}
+
+
+/* Login Page Styles */
+
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #c7d2fe, #e0f2fe);
+}
+
+.login-form {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #1f2937;
+}
+
+.login-form input {
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background-color: #f9fafb;
+  transition: border 0.2s ease;
+}
+
+.login-form input:focus {
+  border-color: #6366f1;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.login-form button {
+  padding: 14px;
+  background: #6366f1;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-form button:hover {
+  background: #4f46e5;
+}
+
+
+/* Home Page Styles */
+
+.forts-page {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  color: #0f172a;
+  margin-bottom: 40px;
+}
+
+.forts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.fort-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.fort-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.fort-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.fort-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.fort-name {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.fort-location {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+.fort-description {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Banner Styles */
+.banner {
+  position: relative;
+  height: 320px;
+  background-image: url('/banner.png'); /* 👈 Put your banner image in /public/banner.jpg */
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.banner-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.banner-title {
+  color: #d1d5db;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.banner-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #e5e7eb;
+}
+
+
+
